@@ -1,0 +1,20 @@
+# ---- 编译产物（体积最大，绝不能入库）----
+build/
+
+# ---- 本地配置 ----
+# sdkconfig 是本机生成的，不同机器不一样；
+# 要保留配置请用 sdkconfig.defaults 入库
+sdkconfig
+sdkconfig.old
+
+# ---- 组件管理 ----
+dependencies.lock
+managed_components/
+
+# ---- 编辑器个人配置 ----
+.vscode/
+
+# ---- 固件二进制 ----
+*.bin
+*.elf
+*.map
