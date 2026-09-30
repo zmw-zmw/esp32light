@@ -1,6 +1,0 @@
-# 构建脚本不计入 GitHub 语言统计（否则仓库会被识别成 Shell 而不是 C）
-b.sh linguist-vendored
-*.sh linguist-vendored
-
-# sdkconfig 是配置文件，同样不计入
-sdkconfig linguist-vendored
