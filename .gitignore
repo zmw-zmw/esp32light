@@ -1,20 +1,32 @@
-# ---- 编译产物（体积最大，绝不能入库）----
+# ================== ESP-IDF 标准忽略 ==================
+
+# ---- 编译产物 ----
 build/
-
-# ---- 本地配置 ----
-# sdkconfig 是本机生成的，不同机器不一样；
-# 要保留配置请用 sdkconfig.defaults 入库
-sdkconfig
-sdkconfig.old
-
-# ---- 组件管理 ----
-dependencies.lock
-managed_components/
-
-# ---- 编辑器个人配置 ----
-.vscode/
-
-# ---- 固件二进制 ----
 *.bin
 *.elf
 *.map
+*.hex
+*.o
+*.a
+*.obj
+
+# ---- 本机配置（想保留默认配置请建 sdkconfig.defaults 并入库）----
+sdkconfig
+sdkconfig.old
+
+# ---- 组件依赖（可重新拉取）----
+dependencies.lock
+managed_components/
+
+# ---- 编辑器与系统文件 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---- 日志与临时 ----
+*.log
+*.tmp
+*~
